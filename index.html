@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber T-Rex Runner | Modern Dino Game</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <!-- Header / Stats Bar -->
+    <header class="header">
+      <div class="brand">
+        <span class="brand-badge">ARCADE</span>
+        <h1 class="brand-title">CYBER T-REX</h1>
+      </div>
+      <div class="scoreboard">
+        <div class="score-card">
+          <span class="score-label">HI SCORE</span>
+          <span id="high-score" class="score-val">00000</span>
+        </div>
+        <div class="score-card current">
+          <span class="score-label">SCORE</span>
+          <span id="current-score" class="score-val">00000</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Canvas Play Area -->
+    <main class="canvas-container" id="canvas-container">
+      <canvas id="game-canvas" width="800" height="300"></canvas>
+
+      <!-- Overlay for Start / Pause / Game Over -->
+      <div class="overlay" id="overlay">
+        <div class="overlay-card" id="overlay-card">
+          <div class="status-icon" id="status-icon">🦖</div>
+          <h2 class="overlay-title" id="overlay-title">PRESS SPACE TO RUN</h2>
+          <p class="overlay-subtitle" id="overlay-subtitle">Jump over obstacles, duck flying pterodactyls & beat your high score!</p>
+          <div class="overlay-actions">
+            <button id="start-btn" class="glow-btn">PLAY NOW</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Controls / Help Footer -->
+    <footer class="footer-panel">
+      <div class="controls-guide">
+        <div class="key-hint">
+          <kbd>Space</kbd> or <kbd>↑</kbd>
+          <span>Jump</span>
+        </div>
+        <div class="key-hint">
+          <kbd>↓</kbd>
+          <span>Duck</span>
+        </div>
+        <div class="key-hint">
+          <kbd>P</kbd>
+          <span>Pause</span>
+        </div>
+      </div>
+
+      <!-- Mobile Touch Buttons -->
+      <div class="touch-controls" id="touch-controls">
+        <button id="touch-duck" class="touch-btn" aria-label="Duck">
+          <span>⬇️ DUCK</span>
+        </button>
+        <button id="touch-jump" class="touch-btn primary" aria-label="Jump">
+          <span>⬆️ JUMP</span>
+        </button>
+      </div>
+    </footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
